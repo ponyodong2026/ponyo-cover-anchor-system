@@ -14,7 +14,8 @@
 - 锚点位置
 - 配色方案
 - 字重层级
-- 可直接用于 ChatGPT Image 2 / DALL-E 的生图提示词
+- 可直接用于 ChatGPT Image 2 / DALL-E 的完整成品封面提示词
+- 旧封面诊断和改版建议
 - 排版指导
 
 ## Core Formula
@@ -33,6 +34,35 @@
 | 截图型 | 真实截图遮罩 × 手写感标注 × 低饱和底色 | 案例、结果、测评 |
 | 情绪型 | 全出血人物图 × 单行大字 × 撞色条 | 情感、生活、故事 |
 
+## Two Workflows
+
+### 1. Generate a Finished Cover
+
+Use `cover-anchor-system/references/finished-cover-prompts.md`.
+
+This is the default workflow. It asks ChatGPT Image 2 to generate a complete social-media cover in one image, including:
+
+- Chinese headline
+- category tag
+- supporting badge
+- main visual anchor
+- color blocks
+- screenshot / number / portrait / emotion scene
+
+### 2. Diagnose and Redesign a Cover
+
+Use `cover-anchor-system/references/cover-diagnosis-checklist.md`.
+
+This workflow scores an existing cover on:
+
+- information density
+- visual anchor
+- thumbnail readability
+- color contrast
+- trust / realism
+
+It then returns the top fixes and a replacement finished-cover prompt.
+
 ## Repository Structure
 
 ```text
@@ -40,6 +70,8 @@ cover-anchor-system/
   SKILL.md
   references/
     template-formulas.md
+    finished-cover-prompts.md
+    cover-diagnosis-checklist.md
     image-prompts.md
 examples/
   cover-cases/
@@ -55,7 +87,7 @@ Copy the `cover-anchor-system` folder into your local skills directory, then cal
 ~/.codex/skills/cover-anchor-system
 ```
 
-Or read `cover-anchor-system/SKILL.md` directly and use the prompt library inside `references/image-prompts.md`.
+Or read `cover-anchor-system/SKILL.md` directly and use the prompt library inside `references/finished-cover-prompts.md`.
 
 ## Size Reference
 
@@ -76,3 +108,18 @@ The `examples/cover-cases` folder contains 12 ChatGPT Image 2 cover examples:
 - 3 emotional-style covers
 
 These examples are included to show the intended visual output: real social-media covers, not explanatory slides or article illustrations.
+
+## Quick Prompt
+
+```text
+Use $cover-anchor-system to create a Xiaohongshu cover for:
+Topic: AI video prompts
+Audience: beginner creators
+Goal: make people click from the feed
+Title: 5个AI视频提示词公式
+Style: tech, high contrast, complete finished cover with Chinese text
+```
+
+## Notes
+
+`references/image-prompts.md` is kept for text-free background generation. For normal social-media publishing, prefer `references/finished-cover-prompts.md` because the cover should be a finished poster, not a blank background waiting for manual text overlay.

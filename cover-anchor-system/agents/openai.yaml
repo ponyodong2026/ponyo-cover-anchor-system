@@ -1,0 +1,5 @@
+interface:
+  display_name: "PONYO Cover Anchor System"
+  short_description: "Design clickable Xiaohongshu covers"
+  brand_color: "#E74C3C"
+  default_prompt: "Use $cover-anchor-system to design a finished Xiaohongshu cover with a strong visual anchor."

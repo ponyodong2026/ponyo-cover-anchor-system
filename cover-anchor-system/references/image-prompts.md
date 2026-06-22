@@ -1,4 +1,8 @@
-# ChatGPT 生图提示词库
+# Text-Free Background Prompt Library
+
+This is the legacy background-only prompt library. Use it only when the user explicitly wants to generate a text-free background and add typography manually later.
+
+For normal Xiaohongshu / WeChat cover work, use `finished-cover-prompts.md` instead. Finished cover prompts include Chinese headline text, tags, badges, and the full cover composition.
 
 ## 使用说明
 
