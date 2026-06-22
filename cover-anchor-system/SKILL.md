@@ -1,6 +1,6 @@
 ---
 name: cover-anchor-system
-description: 波妞小红书强钩子爆款封面。小红书/公众号封面「信息密度 × 视觉锚点」设计系统。Use when the user wants Xiaohongshu covers, WeChat article covers, social-media title images, cover diagnosis, cover redesign, click-through-rate improvement, visual-anchor planning, cover color/type hierarchy, doodle-outline fresh covers, or ChatGPT Image 2 prompts for complete finished covers. Outputs template choice, anchor layout, color and type hierarchy, finished-cover generation prompts, and critique/checklist guidance.
+description: 波妞小红书强钩子爆款封面。小红书/公众号封面「信息密度 × 视觉锚点」设计系统。Use when the user wants Xiaohongshu covers, WeChat article covers, social-media title images, cover diagnosis, cover redesign, click-through-rate improvement, visual-anchor planning, cover color/type hierarchy, doodle-outline fresh covers, sunlit scrapbook cutout photo-collage covers, or ChatGPT Image 2 prompts for complete finished covers. Outputs template choice, anchor layout, color and type hierarchy, finished-cover generation prompts, and critique/checklist guidance.
 ---
 
 # 波妞小红书强钩子爆款封面
@@ -30,6 +30,7 @@ Do not hard-code the author's watermark, logo, `波妞`, `PONYO`, or any `@` han
 3. Read the relevant reference file:
    - New complete cover: `references/finished-cover-prompts.md`
    - Doodle-outline fresh cover: `references/doodle-outline-fresh-style.md`
+   - Sunlit scrapbook cutout cover: `references/sunlit-scrapbook-cutout-style.md`
    - Existing cover critique/redesign: `references/cover-diagnosis-checklist.md`
    - Template measurements/colors: `references/template-formulas.md`
    - Text-free background assets only: `references/image-prompts.md`
@@ -48,10 +49,11 @@ Do not hard-code the author's watermark, logo, `波妞`, `PONYO`, or any `@` han
 | 情感/生活/故事 | 情绪型 | 人脸（天然最强锚点）|
 | 品牌/产品/工具 | 冲突型 or 截图型 | 视情况选 |
 | 旅行/家居/Vlog/Citywalk | 涂鸦描边小清新 | 真实照片主体 + 白色描边 + 手帐贴纸标题 |
+| 旅行/穿搭/护肤/居家运动/生活方式 | 阳光胶片拼贴白描边 | 顶部胶片条 + 人物白描边 + 手写刷字标题 |
 
 ---
 
-## 四套模板一览
+## 模板与风格一览
 
 ### 🔴 冲突型
 反直觉标题 × 强对比色 × 人物遮罩
@@ -72,6 +74,10 @@ Do not hard-code the author's watermark, logo, `波妞`, `PONYO`, or any `@` han
 ### 🟣 涂鸦描边小清新
 真实照片 × 白色描边 × 手帐贴纸标题
 → 适合：旅行、家居、日常Vlog、Citywalk、咖啡探店
+
+### 🟤 阳光胶片拼贴白描边
+阳光实拍 × 顶部胶片拼贴 × 人物白描边 × 手写刷字标题
+→ 适合：旅行 Vlog、穿搭、护肤、居家运动、生活方式教程
 
 ---
 
@@ -96,9 +102,10 @@ When diagnosing an existing cover, additionally include:
 
 ## 参考文件
 
-- `references/template-formulas.md` — 4套模板完整参数表（锚点规则、配色阈值、字重比）
-- `references/finished-cover-prompts.md` — 12个子风格的完整成品封面 ChatGPT Image 2 提示词
+- `references/template-formulas.md` — 基础模板参数表（锚点规则、配色阈值、字重比）
+- `references/finished-cover-prompts.md` — 多种完整成品封面 ChatGPT Image 2 提示词
 - `references/doodle-outline-fresh-style.md` — 涂鸦描边小清新封面风格包（旅行/家居/Vlog/Citywalk）
+- `references/sunlit-scrapbook-cutout-style.md` — 阳光胶片拼贴白描边封面风格包（旅行/穿搭/护肤/运动/生活方式）
 - `references/cover-diagnosis-checklist.md` — 旧封面诊断、打分、改版规则
 - `references/image-prompts.md` — 旧版 text-free 背景素材提示词，仅在用户明确要后期叠字时使用
 

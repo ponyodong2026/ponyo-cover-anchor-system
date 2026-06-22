@@ -23,6 +23,8 @@ Do not use the older background-only prompts in `image-prompts.md` unless the us
   - Emotional Portrait
   - Lifestyle Scene
   - Healing Minimal Atmosphere
+- 5. Lifestyle Photo Styles
+  - Sunlit Scrapbook Cutout
 - Final Prompt Add-ons
 
 ## Universal Prompt Contract
@@ -408,6 +410,45 @@ Healing editorial cover, white, pale green, soft sunlight, calm and refined.
 
 Constraints:
 Text must be clear despite light palette. Avoid low-contrast pale text, no garbled characters, no watermark.
+```
+
+## 5. Lifestyle Photo Styles
+
+### A. Sunlit Scrapbook Cutout
+
+Use for travel Vlog, Citywalk, outfit, skincare, beauty, home workout, wellness, and warm lifestyle routine covers.
+
+This style has its own full style pack in `sunlit-scrapbook-cutout-style.md`. Load that file before writing the final prompt when the user asks for:
+
+- 阳光胶片拼贴
+- 人物白描边
+- 手写刷字标题
+- 顶部胶片条
+- lifestyle photo collage covers
+- skincare / outfit / travel / home workout reference-cover style
+
+Quick prompt skeleton:
+
+```text
+Create a finished 3:4 vertical social-media cover poster, 1080x1440 style.
+Style: sunlit scrapbook cutout cover, warm real-life lifestyle photo collage, handwritten brush typography.
+
+Composition:
+- Warm golden-hour lifestyle photography base, shallow depth of field, cream olive brown color grading.
+- Top 20% tilted photo-strip collage with 3 panels, separated by rough uneven white hand-drawn borders.
+- Main subject on the right, occupying 45-55% of the canvas, with thick irregular white hand-drawn cutout outline.
+- Oversized handwritten brush Chinese title on the left, white base text with butter-yellow and sage-green keyword highlights.
+
+Exact readable Chinese copy:
+- Main headline: "<headline>"
+- Supporting line: "<support line>"
+- Small note: "<optional tiny note>"
+
+Decor:
+Sparse doodle arrows, sparkles, hearts, dashed path, small sun icon, and casual underlines.
+
+Constraints:
+No watermark, no creator signature, no logo, no @ handle unless the user provides one. No QR code, no random extra words, no fake platform UI. Chinese text must be crisp, legible, and correctly written.
 ```
 
 ## Final Prompt Add-ons

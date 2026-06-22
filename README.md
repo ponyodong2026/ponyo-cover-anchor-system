@@ -20,6 +20,7 @@ Made by 波妞 PONYO. 作者归属只放在 skill 文档和仓库说明里；默
 - 字重层级
 - 可直接用于 ChatGPT Image 2 / DALL-E 的完整成品封面提示词
 - 涂鸦描边小清新风格提示词（旅行 / 家居 / Vlog / Citywalk）
+- 阳光胶片拼贴白描边风格提示词（旅行 / 穿搭 / 护肤 / 居家运动 / 生活方式）
 - 旧封面诊断和改版建议
 - 排版指导
 
@@ -30,7 +31,7 @@ Made by 波妞 PONYO. 作者归属只放在 skill 文档和仓库说明里；默
 - **信息密度**：利益点在缩略图里是否一眼看清
 - **视觉锚点**：画面里是否有一个让眼睛停住的位置
 
-## Four Cover Templates
+## Cover Templates And Styles
 
 | Template | Formula | Best For |
 |---|---|---|
@@ -39,8 +40,9 @@ Made by 波妞 PONYO. 作者归属只放在 skill 文档和仓库说明里；默
 | 截图型 | 真实截图遮罩 × 手写感标注 × 低饱和底色 | 案例、结果、测评 |
 | 情绪型 | 全出血人物图 × 单行大字 × 撞色条 | 情感、生活、故事 |
 | 涂鸦描边小清新 | 真实照片 × 白色描边 × 手帐贴纸标题 | 旅行、家居、Vlog、Citywalk |
+| 阳光胶片拼贴白描边 | 阳光实拍 × 顶部胶片条 × 人物白描边 × 手写刷字 | 旅行、穿搭、护肤、运动、生活方式 |
 
-## Two Workflows
+## Workflows
 
 ### 1. Generate a Finished Cover
 
@@ -81,6 +83,20 @@ This workflow creates fresh 3:4 Xiaohongshu covers for travel, home decor, daily
 - sparse arrows, route lines, tape labels, hearts, stars, flowers, and small icons
 - no hard-coded author watermark by default
 
+### 4. Generate a Sunlit Scrapbook Cutout Cover
+
+Use `cover-anchor-system/references/sunlit-scrapbook-cutout-style.md`.
+
+This workflow creates warm lifestyle covers inspired by sunlit scrapbook photo collages:
+
+- golden-hour realistic photography
+- tilted top photo strip with rough white hand-drawn borders
+- main subject on the right with thick irregular white cutout outline
+- oversized handwritten brush Chinese title on the left
+- butter-yellow and sage-green keyword highlights
+- sparse doodle arrows, hearts, sparkles, dashed paths, and underlines
+- no hard-coded author watermark by default
+
 ## Repository Structure
 
 ```text
@@ -90,6 +106,7 @@ cover-anchor-system/
     template-formulas.md
     finished-cover-prompts.md
     doodle-outline-fresh-style.md
+    sunlit-scrapbook-cutout-style.md
     cover-diagnosis-checklist.md
     image-prompts.md
 examples/
@@ -137,6 +154,13 @@ The `examples/doodle-outline-fresh` folder contains 4 fresh doodle-outline cases
 - cozy home decor
 - daily vlog
 - citywalk
+
+The `sunlit-scrapbook-cutout-style.md` reference contains prompt templates for:
+
+- travel / Citywalk
+- outfit / fashion
+- skincare / beauty
+- home workout / wellness
 
 ## Quick Prompt
 
