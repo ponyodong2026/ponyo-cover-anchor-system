@@ -1,9 +1,9 @@
 ---
 name: cover-anchor-system
-description: 小红书/公众号封面「信息密度 × 视觉锚点」设计系统。Use when the user wants Xiaohongshu covers, WeChat article covers, social-media title images, cover diagnosis, cover redesign, click-through-rate improvement, visual-anchor planning, cover color/type hierarchy, or ChatGPT Image 2 prompts for complete finished covers. Outputs template choice, anchor layout, color and type hierarchy, finished-cover generation prompts, and critique/checklist guidance.
+description: 波妞小红书强钩子爆款封面。小红书/公众号封面「信息密度 × 视觉锚点」设计系统。Use when the user wants Xiaohongshu covers, WeChat article covers, social-media title images, cover diagnosis, cover redesign, click-through-rate improvement, visual-anchor planning, cover color/type hierarchy, doodle-outline fresh covers, or ChatGPT Image 2 prompts for complete finished covers. Outputs template choice, anchor layout, color and type hierarchy, finished-cover generation prompts, and critique/checklist guidance.
 ---
 
-# Cover Anchor System
+# 波妞小红书强钩子爆款封面
 
 ## 核心逻辑
 
@@ -21,12 +21,15 @@ Unless the user explicitly asks for a text-free background, design a **complete 
 
 Do not default to HTML/CSS mockups or background-only assets for social covers.
 
+Do not hard-code the author's watermark, logo, `波妞`, `PONYO`, or any `@` handle into generated covers. If the user provides their own account mark, include only that user-provided mark; otherwise generate a clean cover with no watermark. The skill's attribution belongs in the repository/README, not inside default output images.
+
 ## Operating Flow
 
 1. Identify the content type, audience, platform, and existing title.
 2. Pick one template from the matrix below.
 3. Read the relevant reference file:
    - New complete cover: `references/finished-cover-prompts.md`
+   - Doodle-outline fresh cover: `references/doodle-outline-fresh-style.md`
    - Existing cover critique/redesign: `references/cover-diagnosis-checklist.md`
    - Template measurements/colors: `references/template-formulas.md`
    - Text-free background assets only: `references/image-prompts.md`
@@ -44,6 +47,7 @@ Do not default to HTML/CSS mockups or background-only assets for social covers.
 | 案例/结果/对比 | 截图型 | 截图内容 + 标注箭头 |
 | 情感/生活/故事 | 情绪型 | 人脸（天然最强锚点）|
 | 品牌/产品/工具 | 冲突型 or 截图型 | 视情况选 |
+| 旅行/家居/Vlog/Citywalk | 涂鸦描边小清新 | 真实照片主体 + 白色描边 + 手帐贴纸标题 |
 
 ---
 
@@ -64,6 +68,10 @@ Do not default to HTML/CSS mockups or background-only assets for social covers.
 ### 🔵 情绪型
 全出血人物图 × 单行大字 × 撞色条
 → 适合：情感类、生活类、vlog封面
+
+### 🟣 涂鸦描边小清新
+真实照片 × 白色描边 × 手帐贴纸标题
+→ 适合：旅行、家居、日常Vlog、Citywalk、咖啡探店
 
 ---
 
@@ -90,6 +98,7 @@ When diagnosing an existing cover, additionally include:
 
 - `references/template-formulas.md` — 4套模板完整参数表（锚点规则、配色阈值、字重比）
 - `references/finished-cover-prompts.md` — 12个子风格的完整成品封面 ChatGPT Image 2 提示词
+- `references/doodle-outline-fresh-style.md` — 涂鸦描边小清新封面风格包（旅行/家居/Vlog/Citywalk）
 - `references/cover-diagnosis-checklist.md` — 旧封面诊断、打分、改版规则
 - `references/image-prompts.md` — 旧版 text-free 背景素材提示词，仅在用户明确要后期叠字时使用
 
@@ -116,3 +125,4 @@ Every cover must pass these checks:
 - There are no dense explanatory paragraphs.
 - Chinese text is large, crisp, and not garbled.
 - No fake logos, fake QR codes, or invented revenue/data claims unless the user provides them.
+- No hard-coded `波妞`, `PONYO`, logo, creator signature, or `@` handle unless the user explicitly provides their own account mark.

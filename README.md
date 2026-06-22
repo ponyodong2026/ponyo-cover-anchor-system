@@ -1,10 +1,14 @@
-# PONYO Cover Anchor System
+# 波妞小红书强钩子爆款封面
 
 小红书 / 公众号封面「信息密度 × 视觉锚点」生成系统。
 
 封面要解决的从来不是“好看”，而是让用户在信息流里 3 秒内决定：这条内容和我有没有关系。
 
+Made by 波妞 PONYO. 作者归属只放在 skill 文档和仓库说明里；默认生成的封面不会硬塞“波妞”水印，用户可以自行提供自己的账号署名。
+
 ![12 cover cases](examples/cover-cases/preview_12_final.jpg)
+
+![doodle outline fresh cases](examples/doodle-outline-fresh/preview_4_doodle_fresh.jpg)
 
 ## What It Does
 
@@ -15,6 +19,7 @@
 - 配色方案
 - 字重层级
 - 可直接用于 ChatGPT Image 2 / DALL-E 的完整成品封面提示词
+- 涂鸦描边小清新风格提示词（旅行 / 家居 / Vlog / Citywalk）
 - 旧封面诊断和改版建议
 - 排版指导
 
@@ -33,6 +38,7 @@
 | 数字型 | 大号数字锚点 × 色块分割 × 悬念副标题 | 干货、教程、步骤 |
 | 截图型 | 真实截图遮罩 × 手写感标注 × 低饱和底色 | 案例、结果、测评 |
 | 情绪型 | 全出血人物图 × 单行大字 × 撞色条 | 情感、生活、故事 |
+| 涂鸦描边小清新 | 真实照片 × 白色描边 × 手帐贴纸标题 | 旅行、家居、Vlog、Citywalk |
 
 ## Two Workflows
 
@@ -63,6 +69,18 @@ This workflow scores an existing cover on:
 
 It then returns the top fixes and a replacement finished-cover prompt.
 
+### 3. Generate a Doodle-Outline Fresh Cover
+
+Use `cover-anchor-system/references/doodle-outline-fresh-style.md`.
+
+This workflow creates fresh 3:4 Xiaohongshu covers for travel, home decor, daily vlog, citywalk, cafe, and other lifestyle topics:
+
+- realistic lifestyle photo base
+- thick white doodle outline around the visual anchor
+- handwritten sticker headline
+- sparse arrows, route lines, tape labels, hearts, stars, flowers, and small icons
+- no hard-coded author watermark by default
+
 ## Repository Structure
 
 ```text
@@ -71,12 +89,16 @@ cover-anchor-system/
   references/
     template-formulas.md
     finished-cover-prompts.md
+    doodle-outline-fresh-style.md
     cover-diagnosis-checklist.md
     image-prompts.md
 examples/
   cover-cases/
     preview_12_final.jpg
     01_*.png ... 12_*.png
+  doodle-outline-fresh/
+    preview_4_doodle_fresh.jpg
+    01_*.png ... 04_*.png
 ```
 
 ## Install
@@ -109,6 +131,13 @@ The `examples/cover-cases` folder contains 12 ChatGPT Image 2 cover examples:
 
 These examples are included to show the intended visual output: real social-media covers, not explanatory slides or article illustrations.
 
+The `examples/doodle-outline-fresh` folder contains 4 fresh doodle-outline cases:
+
+- travel vlog
+- cozy home decor
+- daily vlog
+- citywalk
+
 ## Quick Prompt
 
 ```text
@@ -119,6 +148,10 @@ Goal: make people click from the feed
 Title: 5个AI视频提示词公式
 Style: tech, high contrast, complete finished cover with Chinese text
 ```
+
+## Watermark Rule
+
+The skill itself is credited to 波妞 PONYO in the repository and docs. Generated covers should not contain `波妞`, `PONYO`, logos, signatures, or `@` handles unless the user explicitly supplies their own account mark.
 
 ## Notes
 

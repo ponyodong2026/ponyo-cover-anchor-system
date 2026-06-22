@@ -36,6 +36,7 @@ Every finished-cover prompt should include:
 - Text hierarchy: headline first, supporting text second, tag last
 - Mobile readability: large title, thick strokes, high contrast
 - Avoid list: no garbled Chinese, no tiny paragraphs, no fake logos, no watermark
+- Default watermark rule: do not add `波妞`, `PONYO`, author logos, creator signatures, or `@` handles. If the user provides their own account mark, include only that user-provided mark; otherwise leave the cover clean.
 
 Use this replacement pattern before sending a prompt:
 
@@ -45,6 +46,7 @@ Audience: <target reader>
 Exact headline: "<8-14 Chinese characters if possible>"
 Support line: "<short benefit or proof>"
 Tag: "<category label>"
+Account mark: "<optional; leave blank unless the user provides one>"
 ```
 
 If the user's headline is too long, create a short cover headline and keep the full title for post body copy.
